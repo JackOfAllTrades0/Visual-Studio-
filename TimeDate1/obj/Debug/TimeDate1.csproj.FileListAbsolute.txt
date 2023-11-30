@@ -1,0 +1,7 @@
+C:\Coding\C#\School Stuff\TimeDate1\bin\Debug\TimeDate1.exe.config
+C:\Coding\C#\School Stuff\TimeDate1\bin\Debug\TimeDate1.exe
+C:\Coding\C#\School Stuff\TimeDate1\bin\Debug\TimeDate1.pdb
+C:\Coding\C#\School Stuff\TimeDate1\obj\Debug\TimeDate1.csproj.AssemblyReference.cache
+C:\Coding\C#\School Stuff\TimeDate1\obj\Debug\TimeDate1.csproj.CoreCompileInputs.cache
+C:\Coding\C#\School Stuff\TimeDate1\obj\Debug\TimeDate1.exe
+C:\Coding\C#\School Stuff\TimeDate1\obj\Debug\TimeDate1.pdb

@@ -1,0 +1,8 @@
+E:\Coding\RecordPlayer\bin\Debug\RecordPlayer.exe.config
+E:\Coding\RecordPlayer\bin\Debug\RecordPlayer.exe
+E:\Coding\RecordPlayer\bin\Debug\RecordPlayer.pdb
+E:\Coding\RecordPlayer\obj\Debug\RecordPlayer.csproj.AssemblyReference.cache
+E:\Coding\RecordPlayer\obj\Debug\RecordPlayer.csproj.SuggestedBindingRedirects.cache
+E:\Coding\RecordPlayer\obj\Debug\RecordPlayer.csproj.CoreCompileInputs.cache
+E:\Coding\RecordPlayer\obj\Debug\RecordPlayer.exe
+E:\Coding\RecordPlayer\obj\Debug\RecordPlayer.pdb

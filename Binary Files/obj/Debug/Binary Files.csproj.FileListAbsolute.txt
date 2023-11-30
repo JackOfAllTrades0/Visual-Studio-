@@ -1,0 +1,8 @@
+C:\Users\Jjohnson1.18\source\repos\Binary Files\bin\Debug\Binary Files.exe.config
+C:\Users\Jjohnson1.18\source\repos\Binary Files\bin\Debug\Binary Files.exe
+C:\Users\Jjohnson1.18\source\repos\Binary Files\bin\Debug\Binary Files.pdb
+C:\Users\Jjohnson1.18\source\repos\Binary Files\obj\Debug\Binary Files.csproj.AssemblyReference.cache
+C:\Users\Jjohnson1.18\source\repos\Binary Files\obj\Debug\Binary Files.csproj.SuggestedBindingRedirects.cache
+C:\Users\Jjohnson1.18\source\repos\Binary Files\obj\Debug\Binary Files.csproj.CoreCompileInputs.cache
+C:\Users\Jjohnson1.18\source\repos\Binary Files\obj\Debug\Binary Files.exe
+C:\Users\Jjohnson1.18\source\repos\Binary Files\obj\Debug\Binary Files.pdb

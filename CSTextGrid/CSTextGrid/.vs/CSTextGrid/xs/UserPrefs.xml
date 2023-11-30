@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{C698C8D3-3206-44BF-A47B-CE9023AB9A96}|Default">
+  <MonoDevelop.Ide.ItemProperties.CSTextGrid PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CSTextGrid/MainForm.cs">
+    <Files>
+      <File FileName="CSTextGrid/MainForm.cs" Line="177" Column="67" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CSTextGrid" expanded="True">
+            <Node name="CSTextGrid" expanded="True" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
