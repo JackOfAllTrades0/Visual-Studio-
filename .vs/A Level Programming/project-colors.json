@@ -5,7 +5,12 @@
       "ProjectGuid": "33ed0dcb-2313-483e-b7bf-ba5415cf6067",
       "DisplayName": "RecordPlayer",
       "ColorIndex": 0
+    },
+    "8978b434-a4a7-412a-90e3-4b2466db323d": {
+      "ProjectGuid": "8978b434-a4a7-412a-90e3-4b2466db323d",
+      "DisplayName": "TimesTables",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

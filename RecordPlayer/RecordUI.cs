@@ -4,9 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace RecordPlayer
 {
-    internal class RecordUI
+    class RecordUI
     {
+        static void Main(string[] args)
+        {
+            StudentRecords RecordIt = new StudentRecords();
+            RecordIt.CreateRecord();
+
+            Console.ReadKey();
+        }
+
     }
 }

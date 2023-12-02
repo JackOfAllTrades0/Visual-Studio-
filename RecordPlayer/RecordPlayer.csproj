@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="RecordUI.cs" />
     <Compile Include="StudentRecords.cs" />
+    <Compile Include="UsefulMethods.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

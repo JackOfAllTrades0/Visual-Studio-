@@ -6,3 +6,10 @@ E:\Coding\RecordPlayer\obj\Debug\RecordPlayer.csproj.SuggestedBindingRedirects.c
 E:\Coding\RecordPlayer\obj\Debug\RecordPlayer.csproj.CoreCompileInputs.cache
 E:\Coding\RecordPlayer\obj\Debug\RecordPlayer.exe
 E:\Coding\RecordPlayer\obj\Debug\RecordPlayer.pdb
+C:\Coding\C#\School Stuff\RecordPlayer\bin\Debug\RecordPlayer.exe.config
+C:\Coding\C#\School Stuff\RecordPlayer\bin\Debug\RecordPlayer.exe
+C:\Coding\C#\School Stuff\RecordPlayer\bin\Debug\RecordPlayer.pdb
+C:\Coding\C#\School Stuff\RecordPlayer\obj\Debug\RecordPlayer.csproj.AssemblyReference.cache
+C:\Coding\C#\School Stuff\RecordPlayer\obj\Debug\RecordPlayer.csproj.CoreCompileInputs.cache
+C:\Coding\C#\School Stuff\RecordPlayer\obj\Debug\RecordPlayer.exe
+C:\Coding\C#\School Stuff\RecordPlayer\obj\Debug\RecordPlayer.pdb
