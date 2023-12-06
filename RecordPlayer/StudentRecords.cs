@@ -11,8 +11,10 @@ namespace RecordPlayer
     class StudentRecords
     {
         public static string ClassName;
-        public StreamWriter sw = new StreamWriter("Class_Records.txt",append:true);
+        public StreamWriter sw = new StreamWriter("Class_Records.txt", append: true);
         public StreamReader sr = new StreamReader("Class_Records.txt");
+        public static List<int> Order_Length = new List<int>();     
+        public static IDictionary<string, List<int>> OrdinalFiles = new Dictionary<string, List<int>>(); // contains a dictionary of all record names and the order they were
         public record Person(string ID, string FirstName, string Surname, string TutorGroup, string Score); // 'Blue prints' for a record containing fields relative to a student
         public static Person[] StuData = new Person[]
         {
@@ -41,14 +43,19 @@ namespace RecordPlayer
 
         public void SaveCurrentRecord()
         {
+            int numlines = 0;
             using (sw)
             {
-                sw.WriteLine("\n" + ClassName+":");
+                sw.WriteLine(" - \n" + ClassName + ":");
                 foreach (var student in StuData)
                 {
                     sw.WriteLine("-" + student);
+                    numlines++;
                 }
                 sw.WriteLine("End of Class Record");
+                Order_Length.Add(OrdinalFiles.Count + 1);
+                Order_Length.Add(numlines + 3);
+                OrdinalFiles.Add(ClassName, Order_Length);
             }
         }
 
@@ -63,7 +70,6 @@ namespace RecordPlayer
                     {
                         FileContents.Append(sr.ReadLine());
                     }
-
                 }
             }
             catch(Exception e)
