@@ -4,32 +4,59 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TimesTable;
+using Mystuff;
 
 namespace RecordPlayer
 {
     class StudentRecords
     {
         public static string ClassName;
-        public StreamWriter sw = new StreamWriter("Class_Records.txt", append: true);
+        public StreamWriter sw = new StreamWriter("Class_Records.txt",append:true);
         public StreamReader sr = new StreamReader("Class_Records.txt");
-        public static List<int> Order_Length = new List<int>();     
-        public static IDictionary<string, List<int>> OrdinalFiles = new Dictionary<string, List<int>>(); // contains a dictionary of all record names and the order they were
+        public static Dictionary<string , int> OrdinalRecords = new Dictionary<string, int>();
+        public List<string> FileContents = new List<string> { };
         public record Person(string ID, string FirstName, string Surname, string TutorGroup, string Score); // 'Blue prints' for a record containing fields relative to a student
         public static Person[] StuData = new Person[]
         {
 
         };
 
-        public StudentRecords(string nameOfClass ) 
+        public StudentRecords( ) 
         {
-            ClassName = nameOfClass;
+            try
+            {
+                using (sr)
+                {
+                    while (sr.Peek() > -1)
+                    {
+                        FileContents.Append(sr.ReadLine());
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Couldn't access file: ");
+                Console.WriteLine(e.Message);
+            }
         }
 
-        public void CreateRecord()
+        public void CreateRecords()
         {
-            string[] fields = UsefulMethods.InputInLogs("ID~FirstName~Surname~TutorGroup~Score", 5);
-            StuData = StuData.Append(new Person(fields[0], fields[1], fields[2], fields[3], fields[4])).ToArray();
+            bool ArrayFinished = false;
+            const string y = "y";
+            do
+            {
+                string[] fields = UsefulMethods.InputInLogs("ID~FirstName~Surname~TutorGroup~Score", 5);
+                StuData = StuData.Append(new Person(fields[0], fields[1], fields[2], fields[3], fields[4])).ToArray();
+                Console.Write("Would you like to continue? (y/n): ");
+                string answer = Console.ReadLine().ToLower();
+                if (answer == "n")
+                    ArrayFinished = true;
+                else
+                    ArrayFinished = false;
+
+            } while (ArrayFinished == false);
+           
         }
 
         public void LogRecords()
@@ -46,36 +73,41 @@ namespace RecordPlayer
             int numlines = 0;
             using (sw)
             {
-                sw.WriteLine(" - \n" + ClassName + ":");
+                sw.WriteLine(ClassName+":");
                 foreach (var student in StuData)
                 {
                     sw.WriteLine("-" + student);
                     numlines++;
                 }
-                sw.WriteLine("End of Class Record");
-                Order_Length.Add(OrdinalFiles.Count + 1);
-                Order_Length.Add(numlines + 3);
-                OrdinalFiles.Add(ClassName, Order_Length);
+                sw.Write("End of"+ ClassName + "\n - ");
+                OrdinalRecords[ClassName] = numlines;
+            }
+        }
+
+        public void ClearRecords()
+        {
+            foreach (var student in StuData)
+            {
+               
             }
         }
 
         public void LoadRecord()
         {
-            List<string> FileContents = new List<string> { };
-            try
-            { 
-                using (sr)
-                {
-                    while (sr.Peek() > -1)
-                    {
-                        FileContents.Append(sr.ReadLine());
-                    }
-                }
-            }
-            catch(Exception e)
+            int StartIndex = FileContents.IndexOf(ClassName);
+            int RecordDuration = OrdinalRecords[ClassName];
+            string[] LoadedRecord = (string[])FileContents.Skip(StartIndex + 1).Take(RecordDuration);
+            string[] FieldArray = { };
+            Array.Clear(StuData, 0, StuData.Length);
+            foreach (var student in LoadedRecord)
             {
-                
+                foreach (var field in student)
+                {
+                    FieldArray.Append(field.ToString());
+                }
+                StuData = StuData.Append(new Person(FieldArray[0], FieldArray[1], FieldArray[2], FieldArray[3], FieldArray[4])).ToArray()
             }
+
         }
 
        

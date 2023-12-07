@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TimesTable
+namespace Mystuff
 {
-    public static class UsefulMethods
+    static class UsefulMethods
     {
-        public static StringBuilder YesOrNo(string message)
+        static StringBuilder YesOrNo(string message)
         {
             string[] ValidAns = { "y", "n", "yes", "no", "yeah", "nah" }; // Array of allowed responses
             StringBuilder answer = new StringBuilder("",20); // Creates a editable string of 20 characters (more memory efficient)
