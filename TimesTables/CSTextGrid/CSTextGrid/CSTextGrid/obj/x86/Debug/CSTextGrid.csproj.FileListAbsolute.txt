@@ -1,8 +1,0 @@
-E:\CSTextGrid\CSTextGrid\CSTextGrid\bin\Debug\CSTextGrid.exe.config
-E:\CSTextGrid\CSTextGrid\CSTextGrid\bin\Debug\CSTextGrid.exe
-E:\CSTextGrid\CSTextGrid\CSTextGrid\bin\Debug\CSTextGrid.pdb
-E:\CSTextGrid\CSTextGrid\CSTextGrid\obj\x86\Debug\CSTextGrid.csproj.AssemblyReference.cache
-E:\CSTextGrid\CSTextGrid\CSTextGrid\obj\x86\Debug\CSTextGrid.csproj.SuggestedBindingRedirects.cache
-E:\CSTextGrid\CSTextGrid\CSTextGrid\obj\x86\Debug\CSTextGrid.csproj.CoreCompileInputs.cache
-E:\CSTextGrid\CSTextGrid\CSTextGrid\obj\x86\Debug\CSTextGrid.exe
-E:\CSTextGrid\CSTextGrid\CSTextGrid\obj\x86\Debug\CSTextGrid.pdb

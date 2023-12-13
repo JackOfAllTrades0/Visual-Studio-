@@ -1,0 +1,8 @@
+E:\Coding\Paper1Examples\bin\Debug\Paper1Examples.exe.config
+E:\Coding\Paper1Examples\bin\Debug\Paper1Examples.exe
+E:\Coding\Paper1Examples\bin\Debug\Paper1Examples.pdb
+E:\Coding\Paper1Examples\obj\Debug\Paper1Examples.csproj.AssemblyReference.cache
+E:\Coding\Paper1Examples\obj\Debug\Paper1Examples.csproj.SuggestedBindingRedirects.cache
+E:\Coding\Paper1Examples\obj\Debug\Paper1Examples.csproj.CoreCompileInputs.cache
+E:\Coding\Paper1Examples\obj\Debug\Paper1Examples.exe
+E:\Coding\Paper1Examples\obj\Debug\Paper1Examples.pdb

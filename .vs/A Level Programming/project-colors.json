@@ -10,7 +10,12 @@
       "ProjectGuid": "8978b434-a4a7-412a-90e3-4b2466db323d",
       "DisplayName": "TimesTables",
       "ColorIndex": 1
+    },
+    "9a38a2b6-4c49-40e1-9ffe-73aa52543aed": {
+      "ProjectGuid": "9a38a2b6-4c49-40e1-9ffe-73aa52543aed",
+      "DisplayName": "Paper1Examples",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 3
 }

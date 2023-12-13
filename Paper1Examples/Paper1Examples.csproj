@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8978B434-A4A7-412A-90E3-4B2466DB323D}</ProjectGuid>
+    <ProjectGuid>{9A38A2B6-4C49-40E1-9FFE-73AA52543AED}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TimesTables</RootNamespace>
-    <AssemblyName>TimesTables</AssemblyName>
+    <RootNamespace>Paper1Examples</RootNamespace>
+    <AssemblyName>Paper1Examples</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -36,9 +36,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="StoreScore.cs" />
-    <Compile Include="TiTaInterface.cs" />
-    <Compile Include="Multiplication.cs" />
+    <Compile Include="Skeleton1.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

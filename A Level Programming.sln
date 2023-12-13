@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordChecker", "Password
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecordPlayer", "RecordPlayer\RecordPlayer.csproj", "{33ED0DCB-2313-483E-B7BF-BA5415CF6067}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paper1Examples", "Paper1Examples\Paper1Examples.csproj", "{9A38A2B6-4C49-40E1-9FFE-73AA52543AED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{33ED0DCB-2313-483E-B7BF-BA5415CF6067}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33ED0DCB-2313-483E-B7BF-BA5415CF6067}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33ED0DCB-2313-483E-B7BF-BA5415CF6067}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A38A2B6-4C49-40E1-9FFE-73AA52543AED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A38A2B6-4C49-40E1-9FFE-73AA52543AED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A38A2B6-4C49-40E1-9FFE-73AA52543AED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A38A2B6-4C49-40E1-9FFE-73AA52543AED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

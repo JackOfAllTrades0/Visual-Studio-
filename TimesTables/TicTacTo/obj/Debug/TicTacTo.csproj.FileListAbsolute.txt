@@ -1,8 +1,0 @@
-E:\Coding\TicTacTo\bin\Debug\TicTacTo.exe.config
-E:\Coding\TicTacTo\bin\Debug\TicTacTo.exe
-E:\Coding\TicTacTo\bin\Debug\TicTacTo.pdb
-E:\Coding\TicTacTo\obj\Debug\TicTacTo.csproj.AssemblyReference.cache
-E:\Coding\TicTacTo\obj\Debug\TicTacTo.csproj.SuggestedBindingRedirects.cache
-E:\Coding\TicTacTo\obj\Debug\TicTacTo.csproj.CoreCompileInputs.cache
-E:\Coding\TicTacTo\obj\Debug\TicTacTo.exe
-E:\Coding\TicTacTo\obj\Debug\TicTacTo.pdb

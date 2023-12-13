@@ -11,6 +11,7 @@ namespace RecordPlayer
     class StudentRecords
     {
         public static string ClassName;
+        private List<string> classNames = new List<string>();
         public StreamWriter sw = new StreamWriter("Class_Records.txt",append:true);
         public StreamReader sr = new StreamReader("Class_Records.txt");
         public static Dictionary<string , int> OrdinalRecords = new Dictionary<string, int>();
@@ -68,28 +69,39 @@ namespace RecordPlayer
             }
         }
 
-        public void SaveCurrentRecord()
+        public void SaveCurrentRecord(string mode)
         {
-            int numlines = 0;
-            using (sw)
+            if (mode == "save")
             {
-                sw.WriteLine(ClassName+":");
-                foreach (var student in StuData)
+                int numlines = 0;
+                using (sw)
                 {
-                    sw.WriteLine("-" + student);
-                    numlines++;
+                    sw.WriteLine(ClassName + ":");
+                    foreach (var student in StuData)
+                    {
+                        sw.WriteLine("-" + student);
+                        numlines++;
+                    }
+                    sw.Write("End of" + ClassName + "\n - ");
+                    OrdinalRecords[ClassName] = numlines;
                 }
-                sw.Write("End of"+ ClassName + "\n - ");
-                OrdinalRecords[ClassName] = numlines;
             }
+            else if (mode == "replace")
+            {
+                int startIndex = FileContents.IndexOf(ClassName);
+                int endIndex = FileContents.IndexOf("End of" + ClassName);
+
+                using (sw)
+                {
+                    
+                }
+            }
+          
         }
 
         public void ClearRecords()
         {
-            foreach (var student in StuData)
-            {
-               
-            }
+            Array.Clear(StuData, 0, StuData.Length);
         }
 
         public void LoadRecord()
@@ -105,9 +117,15 @@ namespace RecordPlayer
                 {
                     FieldArray.Append(field.ToString());
                 }
-                StuData = StuData.Append(new Person(FieldArray[0], FieldArray[1], FieldArray[2], FieldArray[3], FieldArray[4])).ToArray()
+                StuData = StuData.Append(new Person(FieldArray[0], FieldArray[1], FieldArray[2], FieldArray[3], FieldArray[4])).ToArray();
             }
 
+        }
+
+        public List<string> ClassNames
+        {
+            get { return classNames; }
+            set { classNames=value; }
         }
 
        
