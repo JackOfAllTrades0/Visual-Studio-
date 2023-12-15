@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace Mystuff
 {
@@ -46,6 +48,32 @@ namespace Mystuff
                 outValues[i] = TempAnswer; // adds answer to a list
             }
             return outValues; 
+        }
+
+        public static void ClearFileSection(string Oldfile, string newfile, string startText, string EndText)
+        {
+            try
+            {
+                using (StreamReader sr = new StreamReader(Oldfile))
+                {
+                    using (StreamWriter sw = new StreamWriter(newfile))
+                    {
+                        while (sr.ReadLine() != startText)
+                        {
+                            
+                        }
+
+
+                    }
+                }
+               
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Sorry, I couldn't find the file you were looking for");
+                Console.WriteLine(ex.Message);
+            }
+            
         }
     }
 }

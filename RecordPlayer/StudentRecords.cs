@@ -44,7 +44,7 @@ namespace RecordPlayer
         public void CreateRecords()
         {
             bool ArrayFinished = false;
-            const string y = "y";
+            
             do
             {
                 string[] fields = UsefulMethods.InputInLogs("ID~FirstName~Surname~TutorGroup~Score", 5);
