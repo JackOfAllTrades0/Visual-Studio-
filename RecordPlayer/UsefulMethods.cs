@@ -50,20 +50,75 @@ namespace Mystuff
             return outValues; 
         }
 
-        public static void ClearFileSection(string Oldfile, string newfile, string startText, string EndText)
+        public static Tuple<int, int, int> FileTextChunkInfo(string filename, string startText, string EndText)
+        {
+            Tuple<int, int, int> ReturnTuple;
+            try 
+            {
+                using (StreamReader sr = new StreamReader(filename))
+                {
+                    string line;
+                    int LinesInFile = 0;
+                    int ChunkStart = 0;
+                    int ChunkEnd = 0;
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        if (line == startText)
+                        {
+                            ChunkStart = LinesInFile;
+                        }
+                        else if (line == EndText)
+                        {
+                            ChunkEnd = LinesInFile;
+                        }
+                        LinesInFile++;
+                    }
+                    return ReturnTuple = Tuple.Create(LinesInFile, ChunkStart, ChunkEnd);
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Sorr, couldn't access file");
+                Console.WriteLine(e.Message);    
+            }
+            return null;
+       
+        }
+
+        public static void ReplaceFileContent (string Sfilename, string Tfilename, string startText, string EndText, object[] contents )
         {
             try
             {
-                using (StreamReader sr = new StreamReader(Oldfile))
+                using (StreamReader sr = new StreamReader(Sfilename))
                 {
-                    using (StreamWriter sw = new StreamWriter(newfile))
+                    Tuple<int, int, int> FileInfo = FileTextChunkInfo(Sfilename, startText, EndText);
+                    int FileLength = FileInfo.Item1;
+                    int StartPoint = FileInfo.Item2;
+                    int Duration = FileInfo.Item3 - FileInfo.Item2;
+                    
+                    string line;
+                    int IntoFile = 0;
+                    
+                    using (StreamWriter sw = new StreamWriter(Tfilename))
                     {
-                        while (sr.ReadLine() != startText)
+                        while ((line = sr.ReadLine()) != null)
                         {
-                            
+                            if (IntoFile != StartPoint)
+                            {
+                                sw.WriteLine(line);
+                            }
+                            else if (IntoFile == StartPoint)
+                            {
+                                foreach(var item in contents)
+                                {
+                                    sw.WriteLine(startText + ":");
+                                    sw.WriteLine("-" + item);
+                                    sw.Write(EndText + "\n-");
+                                }
+                            }
+                            IntoFile++;
                         }
-
-
                     }
                 }
                

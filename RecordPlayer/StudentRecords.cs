@@ -8,9 +8,10 @@ using Mystuff;
 
 namespace RecordPlayer
 {
-    class StudentRecords
+    public class StudentRecords
     {
         public static string ClassName;
+        private static int fileIteration = 0;
         private List<string> classNames = new List<string>();
         public StreamWriter sw = new StreamWriter("Class_Records.txt",append:true);
         public StreamReader sr = new StreamReader("Class_Records.txt");
@@ -71,7 +72,7 @@ namespace RecordPlayer
 
         public void SaveCurrentRecord(string mode)
         {
-            if (mode == "save")
+            if (mode.ToLower() == "save")
             {
                 int numlines = 0;
                 using (sw)
@@ -86,15 +87,13 @@ namespace RecordPlayer
                     OrdinalRecords[ClassName] = numlines;
                 }
             }
-            else if (mode == "replace")
+            else if (mode.ToLower() == "replace")
             {
-                int startIndex = FileContents.IndexOf(ClassName);
-                int endIndex = FileContents.IndexOf("End of" + ClassName);
-
-                using (sw)
-                {
-                    
-                }
+                string fromfile = $"Class_Records{fileIteration}.txt";
+                string tofile = $"Class_Records{fileIteration + 1}";
+                UsefulMethods.ReplaceFileContent(fromfile, tofile, ClassName, $"End of {ClassName}", StuData);
+                fileIteration++;
+                File.Delete(fromfile);
             }
           
         }
